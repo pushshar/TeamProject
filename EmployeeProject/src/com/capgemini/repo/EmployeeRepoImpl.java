@@ -10,6 +10,9 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 
 	@Override
 	public Employee save(Employee employee) {
+//		save Employee if there is no duplicate Id
+//		or 
+//		return null if employee has duplicate Id
 		if(this.find(employee.getEmployeeId())==null)
 		{
 			employeeList.put(employee.getEmployeeId(), employee);
