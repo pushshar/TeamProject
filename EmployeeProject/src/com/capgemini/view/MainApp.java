@@ -12,7 +12,7 @@ public class MainApp {
 
 	private static Scanner scanner = new Scanner(System.in);
 	private static EmployeeService employeeService = new EmployeeServiceImpl();
-	private static Employee employee;
+
 
 	public static void main(String[] args) {
 		int choice;
@@ -42,12 +42,14 @@ public class MainApp {
 	}
 
 	private static void saveStudent() {
-
+		
 		System.out.println("Enter Employee ID: ");
 		int employeeId = scanner.nextInt();
 		System.out.println("Enter Employee Name: ");
 		String employeeName = scanner.next();
+		System.out.println("Enter Employee salary: ");
 		double employeeSalary = scanner.nextDouble();
+		Employee employee=new Employee();
 		employee.setEmployeeId(employeeId);
 		employee.setEmployeeName(employeeName);
 		employee.setSalary(employeeSalary);
